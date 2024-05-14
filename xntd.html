@@ -207,7 +207,7 @@
       var date = urlParams.get("date");
       var home = urlParams.get("nha");
 
-	  $("a").attr("href", `${window.location.href}index.html?date=${date}&nha=${home}`)
+	  $("a").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf("/))}index.html?date=${date}&nha=${home}`)
 
       function isValidDate(dateString) {
         var regEx = /^\d{2}\/\d{2}\/\d{4}$/;
