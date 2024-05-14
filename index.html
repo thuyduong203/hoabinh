@@ -619,7 +619,7 @@
         var date = urlParams.get('date');
         var home = urlParams.get("nha");
         
-        $("#xntd").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf('index.html'))}xntd.html?date=${date}&nha=${home}`)
+        
         
         function isValidDate(dateString) {
             var regEx = /^\d{2}\/\d{2}\/\d{4}$/;
@@ -660,5 +660,6 @@
       </div>
     </div>
     <audio src="https://cdn.biihappy.com/ziiweb/wedding-musics/BeautifulInWhite-ShaneFilan-524801.mp3" controls="controls" jm_neat="1584795649" style="display: none;"></audio>
+  <script type="text/javascript">$("#xntd").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf('index.html'))}xntd.html?date=${date}&nha=${home}`) </script>
   </body>
 </html>
