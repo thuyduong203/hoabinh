@@ -619,7 +619,7 @@
         var date = urlParams.get('date');
         var home = urlParams.get("nha");
         
-        $("#xntd").attr("href", `/xntd.html?date=${date}&nha=${home}`)
+        $("#xntd").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf('/'))}/xntd.html?date=${date}&nha=${home}`)
         
         function isValidDate(dateString) {
             var regEx = /^\d{2}\/\d{2}\/\d{4}$/;
