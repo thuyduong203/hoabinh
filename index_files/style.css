@@ -212,7 +212,7 @@ textarea:focus {
     justify-content: center;
 }
 .wd_slider_textinfo .name {
-	font-size: 46px;
+	font-size: 65px;
 	color: #fff;
 	line-height: 1.6;
 }
@@ -735,7 +735,6 @@ ul.sub-menu li:last-child a{
 }
 .wd_about_infobox_img{
     float:left;
-    width:100%;
     text-align:center;
     margin-bottom:0px;
     position:relative;
@@ -745,7 +744,6 @@ ul.sub-menu li:last-child a{
     border-radius: 100%;
 }
 .wd_about_infobox_img img{
-    display:inline-block;
     border: 3px solid #fff;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -3493,6 +3491,7 @@ ul.sub-menu a{
 .wd_about_infobox h2 {
     float: none;
     display: inline-block;
+    font-size: 30px !important;
 }
 .wd_about_infobox ul {
     float: none;

@@ -17,7 +17,6 @@
     <link
       href="./xntd_files/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -84,7 +83,7 @@
     <script
       type="text/javascript"
       async=""
-      src="./xntd_files/analytics.js.tải xuống"></script>
+      src="./xntd_files/analytics.js"></script>
     <script type="text/javascript" async="" src="./xntd_files/js"></script>
     <script async="" src="./xntd_files/js(1)"></script>
     <script>
@@ -149,29 +148,8 @@
             <input
               hidden
               type="text"
-              id="year_form"
-              name="entry.1801875284_year" />
-            <input
-              hidden
-              type="text"
-              id="month_form"
-              name="entry.1801875284_month" />
-            <input
-              hidden
-              type="text"
-              id="day_form"
-              name="entry.1801875284_day" />
-            <input
-              hidden
-              type="text"
-              id="YesNo"
-              name="entry.2060884258"
-              value="Có" />
-            <input
-              hidden
-              type="text"
-              id="home"
-              name="entry.188890250"/>
+              id="id"
+              name="entry.516692212" />
           </div>
           <div class="errors mt-1 text-danger text-center"></div>
           <button
@@ -201,13 +179,13 @@
         </div>
       </div>
     </main>
-    <script src="./xntd_files/script.js.tải xuống"></script>
+    <script src="./xntd_files/script.js"></script>
     <script>
       var urlParams = new URLSearchParams(window.location.search);
       var date = urlParams.get("date");
-      var home = urlParams.get("nha");
+      var id = urlParams.get("id");
 
-	  $("a").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf('xntd.html'))}index.html?date=${date}&nha=${home}`)
+	  $("a").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf('xntd.html'))}index.html?date=${date}&id=${id}`)
 
       function isValidDate(dateString) {
         var regEx = /^\d{2}\/\d{2}\/\d{4}$/;
@@ -221,15 +199,11 @@
         var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
           daysInMonth[1] = 29;
-        return day > 0 && day <= daysInMonth[month - 1] && (home === 'trai' || home === 'gai');
+        return day > 0 && day <= daysInMonth[month - 1];
       }
 
-      if (date && isValidDate(date)) {
-        var parts = date.split("/");
-        document.getElementById("year_form").value = parts[2].trim();
-        document.getElementById("month_form").value = parts[1].trim();
-        document.getElementById("day_form").value = parts[0].trim();
-        document.getElementById("home").value = home === 'trai' ? "Nhà Trai":"Nhà Gái";
+      if (id.length > 0) {
+        document.getElementById("id").value = id;
       }
 
       var webroot = "https://hoabinh2024.iwedding.info";
@@ -348,22 +322,5 @@
           });
       }
     </script>
-
-    <audio class="audio-output" style="display: none"></audio>
-    <div id="volume-booster-visusalizer">
-      <div class="sound">
-        <div class="sound-icon"></div>
-        <div class="sound-wave sound-wave_one"></div>
-        <div class="sound-wave sound-wave_two"></div>
-        <div class="sound-wave sound-wave_three"></div>
-      </div>
-      <div class="segments-box">
-        <div data-range="1-20" class="segment"><span></span></div>
-        <div data-range="21-40" class="segment"><span></span></div>
-        <div data-range="41-60" class="segment"><span></span></div>
-        <div data-range="61-80" class="segment"><span></span></div>
-        <div data-range="81-100" class="segment"><span></span></div>
-      </div>
-    </div>
   </body>
 </html>
