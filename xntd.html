@@ -185,7 +185,7 @@
       var date = urlParams.get("date");
       var id = urlParams.get("id");
 
-	  $("a").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf('xntd.html'))}index.html?date=${date}&id=${id}`)
+	    $("a").attr("href", `${window.location.href.substring(0, window.location.href.lastIndexOf('xntd.html'))}index.html?date=${date}&id=${id}`)
 
       function isValidDate(dateString) {
         var regEx = /^\d{2}\/\d{2}\/\d{4}$/;
@@ -225,7 +225,7 @@
             },
           },
           submitHandler: function (form) {
-            if (date && isValidDate(date)) {
+            if (id) {
 				var formData = $(form).serialize();
             $.ajax({
               url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfyKAdsOo_Cfkrd70UfIpN9DerD6WYaegJ_2ejGR46MP6SHEg/formResponse",
